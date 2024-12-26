@@ -1,4 +1,4 @@
-## Chapter 1
+## Part I: Introduction
 
 Originally, the compiler was written in a single source file. However, in this Python version, it's split into multiple source files for better organization:
 
