@@ -1,25 +1,28 @@
 ## Part I: Introduction
 
-Originally, the compiler was written in a single source file. However, in this Python version, it's split into multiple source files for better organization:
+The original compiler was implemented in a single source file. In this Python version, the implementation is divided into multiple source files to improve organization and maintainability:
 
 *   **`cradle.py`:** The main program that coordinates the execution of the compiler.
+*   **`code_processor.py`:** Contains a class for parsing input data and generating formatted code output. Parsing and code generation remain integrated in this version, following the approach of the original series.
 *   **`scanner.py`:** Handles processing of the source code by reading it character by character.
     *   Changes from the original:
-        *   `GetChar` is renamed to `next_char`.
-        *   Instead of the global variable `Look`, the `peek_char` method should be used.
-*   **`code_processor.py`:** Contains a class for parsing input data and generating formatted code output. In the original series, parsing and code generation were not separated, and this version follows the same approach.
+        *   The `GetChar` function has been renamed to `next_char`.
+        *   The global variable `Look` has been replaced with the `peek_char` method.
+
 
 ## Compiler Overview
 
-The primary goal of this compiler is to generate executable code. To achieve this, input and output files can be specified using command-line arguments.
+The primary goal of this compiler is to generate executable code. Input and output files can be specified using command-line arguments. This flexibility allows the compiler to process various input sources and generate corresponding outputs.
 
 ## Usage
-cradle.py [-h] [--M68k OUTPUT_M68K] [--LLVM OUTPUT_LLVM] [input]
+The `cradle.py` script supports the following syntax:
+
+`cradle.py [-h] [input] [--M68k OUTPUT_M68K] [--LLVM OUTPUT_LLVM]`
 
 ### Positional Arguments
 *   `input`: Input source (default: user input).
 
 ### Options
 *   `-h, --help`: Show this help message and exit.
-*   `--M68k OUTPUT_M68K`: Output file or `stdout` for M68000 code.
-*   `--LLVM OUTPUT_LLVM`: Output file or `stdout` for LLVM IR code.
+*   `--M68k OUTPUT_M68K`: Specifies the output file or directs the output to `stdout` for M68000 code.
+*   `--LLVM OUTPUT_LLVM`: Specifies the output file or directs the output to `stdout` for LLVM IR code.
