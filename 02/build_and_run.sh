@@ -15,9 +15,9 @@ echo Compile bitcode to assembly code
 llc -filetype=asm -O0 -relocation-model=pic "$1.bc" -o "$1.asm"
 chk_exit_code
 
-echo Compile bitcode to target Mainframe assembly code
-llc -filetype=asm -O0 -march=systemz -relocation-model=pic "$1.bc" -o "$1.systemz.asm"
-chk_exit_code
+#echo Compile bitcode to target Mainframe assembly code
+#llc -filetype=asm -O0 -march=systemz -relocation-model=pic "$1.bc" -o "$1.systemz.asm"
+#chk_exit_code
 
 echo Compile assembly code to executable
 clang "$1.asm" -o "$1"
