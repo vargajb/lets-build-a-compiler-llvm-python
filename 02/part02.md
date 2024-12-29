@@ -1,6 +1,6 @@
 ## Part II: Expression Parsing
 
-### Project Files
+### Files
 * **`cradle.py`:** The main program that coordinates the execution of the compiler.
 * **`llvm.py`:** A helper class for generating LLVM Intermediate Representation (IR) code.
 * **`code_processor.py`:** Handles expression parsing, implemented in the previous chapter.
