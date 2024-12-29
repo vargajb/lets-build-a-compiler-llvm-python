@@ -1,4 +1,4 @@
-# Python and LLVM IR Implementation of Jack Crenshaw's 'Let's Build a Compiler'
+# Python and LLVM IR Implementation of Jack Crenshaw's "Let's Build a Compiler"
 Learn compiler construction with this Python and LLVM IR implementation of Jack Crenshaw's classic step-by-step "[Let's Build a Compiler](https://compilers.iecc.com/crenshaw/)" series. This repository modernizes Crenshaw's original lightweight compiler, written in Pascal for educational purposes and targeting the [Motorola 68000 processor](https://en.wikipedia.org/wiki/Motorola_68000), by using [Python](https://www.python.org/) and generating [LLVM IR](https://llvm.org/docs/LangRef.html).
 
 
