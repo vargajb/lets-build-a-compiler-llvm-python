@@ -150,3 +150,5 @@ define i32 @floor_div(i32 %x, i32 %y) alwaysinline {
 ```
 #### Known Issue
 The unary `-` and `+` operators are not fully implemented. Their handling will be addressed in Part VI, so these operators were not tested in this chapter.
+---
+<sub>Source: Adapted from Jack Crenshaw's "<a href="https://xmonader.github.io/letsbuildacompiler-pretty/tutor02_expressionparsing.html" target="_blank">Let's Build a Compiler</a>" series.</sub>
