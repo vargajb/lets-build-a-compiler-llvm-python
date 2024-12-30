@@ -28,3 +28,5 @@ The `cradle.py` script supports the following syntax:
 *   `-h, --help`: Show this help message and exit.
 *   `--M68k OUTPUT_M68K`: Specifies the output file or directs the output to `stdout` for M68000 code.
 *   `--LLVM OUTPUT_LLVM`: Specifies the output file or directs the output to `stdout` for LLVM IR code.
+---
+<sub>Source: Adapted from Jack Crenshaw's "<a href="https://xmonader.github.io/letsbuildacompiler-pretty/tutor01_introduction.html" target="_blank">Let's Build a Compiler</a>" series.</sub>
