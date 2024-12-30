@@ -66,7 +66,7 @@ counter;expected;current
 
 In compiler design, [static single assignment form](https://en.wikipedia.org/wiki/Static_single-assignment_form) (often abbreviated as SSA form or simply SSA) is a type of intermediate representation (IR) where each variable is assigned exactly once.
 
-#### The expression `3+5*7` is in different targets
+#### The expression `3+5*7` in different targets
 
 <table>
   <tr>
