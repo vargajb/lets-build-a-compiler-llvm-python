@@ -24,5 +24,5 @@ clang "$1.asm" -o "$1"
 chk_exit_code
 
 echo Run the executable
-./$1 hello
+./$1
 chk_exit_code
