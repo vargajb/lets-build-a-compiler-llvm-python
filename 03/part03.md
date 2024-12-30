@@ -50,3 +50,6 @@ BB3 = 15
       </code></pre>
     </td>
 </table>
+
+---
+<sub>Source: Adapted from Jack Crenshaw's "<a href="https://xmonader.github.io/letsbuildacompiler-pretty/tutor03_moreexpressions.html" target="_blank">Let's Build a Compiler</a>" series.</sub>
