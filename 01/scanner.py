@@ -67,9 +67,17 @@ class Scanner:
         """Recognize a Decimal Digit."""
         return isinstance(c, str) and c.isdigit()
 
+    def is_peek_alpha(self):
+        """Recognize an Alpha Character."""
+        return self.is_alpha(self.peek_char())
+
+    def is_peek_digit(self):
+        """Recognize a Decimal Digit."""
+        return self.is_digit(self.peek_char())
+
     def get_name(self):
         """Get an Identifier."""
-        if not self.is_alpha(self.peek_char()):
+        if not self.is_peek_alpha():
             self.expected("Name", self.peek_char())
         name = self.peek_char().upper()
         self.next_char()
@@ -77,7 +85,7 @@ class Scanner:
 
     def get_num(self):
         """Get a Number."""
-        if not self.is_digit(self.peek_char()):
+        if not self.is_peek_digit():
             self.expected("Integer", self.peek_char())
         num = self.peek_char()
         self.next_char()
