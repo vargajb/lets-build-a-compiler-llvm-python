@@ -15,8 +15,6 @@ import traceback
 import argparse
 from scanner import Scanner
 from code_processor import CodeProcessor
-import ast
-from sympy import sympify
 
 def read_input(path):
     """
