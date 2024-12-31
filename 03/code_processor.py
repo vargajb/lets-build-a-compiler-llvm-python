@@ -2,7 +2,6 @@
 import sys
 from llvm import Llvm
 from scanner import Scanner
-from sympy import sympify
 
 class CodeProcessor:
     """
