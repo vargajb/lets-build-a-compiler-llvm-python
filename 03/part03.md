@@ -37,11 +37,7 @@ bb3 = bb - bb2
       </code></pre>
     </td>
     <td>
-      <pre><code class="bash">
-Compile LLVM IR to bitcode
-Compile bitcode to assembly code
-Compile assembly code to executable
-Run the executable
+      <pre><code class="c">
 A1 = 3
 A2 = 22
 BB = 7
