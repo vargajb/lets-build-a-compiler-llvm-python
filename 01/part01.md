@@ -17,7 +17,7 @@ The primary goal of this compiler is to generate executable code. Input and outp
 #### Files
 The implementation has been modularized into multiple source files for improved organization and maintainability:
 
-*   **`cradle.py`:** Coordinates the execution of the compiler as the main program.
+*   **`cradle.py`:** The main program that coordinates the execution of the compiler.
 *   **`code_processor.py`:** Contains a class for parsing input data and generating formatted code output. Parsing and code generation remain integrated in this version, following the approach of the original series.
 *   **`scanner.py`:** Handles processing of the source code by reading it character by character.
     *   **Key updates:**
