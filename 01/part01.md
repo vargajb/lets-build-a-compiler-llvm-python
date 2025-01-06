@@ -11,6 +11,8 @@ Key points include:
 
 The chapter concludes with a minimal "cradle" program that provides essential functionalities, such as input/output handling, error reporting, and character recognition, forming the foundation for subsequent lessons.
 
+---
+
 ### Modernized version
 The primary goal of this compiler is to generate executable code. Input and output files can be specified using command-line arguments. This flexibility allows the compiler to process various input sources and generate corresponding outputs.
 
@@ -22,7 +24,8 @@ The implementation has been modularized into multiple source files for improved 
 *   **`scanner.py`:** Handles processing of the source code by reading it character by character.
     *   **Key updates:**
         *   Renamed `GetChar` to `next_char` for clarity.
-        *   Replaced the global variable `Look` with the `peek_char` method for improved encapsulation.
+        *   Replaced the global variable `Look` with the `peek_char` method for improved encapsulation.  
+
 #### Usage
 The `cradle.py` script can be executed using the following syntax:
 
@@ -35,5 +38,3 @@ The `cradle.py` script can be executed using the following syntax:
 *   `-h, --help`: Show this help message and exit.
 *   `--M68k OUTPUT_M68K`: Directs the M68000 code output to a file or `stdout`.
 *   `--LLVM OUTPUT_LLVM`: Directs the LLVM IR code output to a file or `stdout`.
----
-<sub>Source: Adapted from Jack Crenshaw's "<a href="https://xmonader.github.io/letsbuildacompiler-pretty/tutor01_introduction.html" target="_blank">Let's Build a Compiler</a>" series.</sub>
