@@ -160,4 +160,7 @@ define i32 @floor_div(i32 %x, i32 %y) alwaysinline {
 Unary operators (`-`, `+`) are partially implemented. In Part VI, we will address their handling to ensure seamless parsing and accurate code generation for complex expressions.
 
 ---
-This chapter's implementation demonstrates foundational expression parsing techniques and establishes a robust base for adding complex features in subsequent parts.
+
+### Summary
+
+This chapter expands on the foundation by teaching readers how to parse and translate mathematical expressions into assembler-language statements. With step-by-step guidance, it covers operator precedence, multi-term expressions, and parentheses, culminating in a functional parser capable of handling basic arithmetic operations. These capabilities set the stage for future enhancements like variables and function calls.
