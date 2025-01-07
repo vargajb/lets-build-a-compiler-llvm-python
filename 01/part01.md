@@ -38,3 +38,9 @@ The `cradle.py` script can be executed using the following syntax:
 *   `-h, --help`: Show this help message and exit.
 *   `--M68k OUTPUT_M68K`: Directs the M68000 code output to a file or `stdout`.
 *   `--LLVM OUTPUT_LLVM`: Directs the LLVM IR code output to a file or `stdout`.
+
+---
+
+### Summary
+
+The first chapter lays the groundwork for the series by introducing basic compiler construction principles. It emphasizes simplicity and practicality, guiding readers through building a minimal "cradle" program. This program serves as the foundation for input/output handling, error reporting, and character recognition, preparing readers for progressively complex tasks in compiler design.
