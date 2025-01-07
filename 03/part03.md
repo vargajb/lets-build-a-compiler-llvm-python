@@ -87,3 +87,9 @@ BB3 = 15
       </code></pre>
     </td>
 </table>
+
+---
+
+### Summary
+
+Building on the expression parsing introduced in Part II, this chapter removes earlier restrictions by adding support for variables, function calls, and assignments. The parser transitions to handling multi-character tokens and embedded white spaces, improving its usability and aligning it with real-world programming scenarios. These advancements prepare the parser for even more complex language features in later chapters.
