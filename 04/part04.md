@@ -77,4 +77,4 @@ This example illustrates the immediate execution of assignments and expressions,
 
 ### Summary
 
-Part IV shifts the focus from compilation to interpretation, emphasizing immediate feedback and execution. By introducing input/output operations, the interpreter becomes interactive and practical for real-time evaluation.
+This chapter transitions the focus from compilation to interpretation, emphasizing immediate feedback and execution. By introducing input/output operations (`?` for input, `!` for output), the interpreter becomes interactive and capable of real-time evaluation. These features set the stage for implementing control structures in the next part.
