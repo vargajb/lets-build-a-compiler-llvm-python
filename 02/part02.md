@@ -1,6 +1,6 @@
 ## Part II: Expression Parsing
 
-[Part 2 of Jack W. Crenshaw's "Let's Build a Compiler!" series](https://xmonader.github.io/letsbuildacompiler-pretty/tutor02_expressionparsing.html) focuses on parsing and translating mathematical expressions into assembler-language statements. It introduces the concept of parsing expressions step by step, gradually expanding functionality while keeping the implementation simple and accessible.
+[Part 2 of Jack W. Crenshaw's "Let's Build a Compiler!" series](https://xmonader.github.io/letsbuildacompiler-pretty/tutor02_expressionparsing.html) focuses on parsing and translating mathematical expressions into assembler-language statements. Through a step-by-step approach, it ensures even beginners can grasp the concepts while laying a foundation for advanced features.
 
 Key topics include:
 
@@ -20,73 +20,53 @@ Key topics include:
 
 8. **Optimization:** Discussing basic optimization techniques, such as peephole optimization and using CPU registers for improved efficiency, while emphasizing the focus on functionality over tight code in this tutorial.
 
-This chapter ends with a nearly functional parser/translator capable of processing a variety of arithmetic expressions. It sets the stage for extending the parser to handle variables, function calls, and more complex tokens in the next lesson.
+This chapter concludes with a functional parser capable of handling basic expressions, preparing readers for more advanced topics in subsequent lessons.
 
 ---
+### Modernized Version
+This chapter expands the modernized compiler to parse and handle more complex mathematical expressions while leveraging the modular structure introduced earlier. Updates in this part focus on efficient parsing techniques and enhancing code generation for more advanced arithmetic operations.
+
 
 ### Files
-* **`cradle.py`:** The main program that coordinates the execution of the compiler.
-* **`llvm.py`:** A helper class for generating LLVM Intermediate Representation (IR) code.
-* **`code_processor.py`:** Handles expression parsing, implemented in the previous chapter.
-* **`scanner.py`:** Processes the source code by reading it character by character.
-* **`test_1_expression.txt`, `test_200_expression.txt`:** Example expressions to test the expression handling.
-* **`build_and_run.sh`:** Script for compiling and executing LLVM IR code.
-  Example usage:
-  ```bash
-  ./build_and_run.sh test_1_expression
-  ./build_and_run.sh test_200_expression
+This section retains the modular structure introduced in Part I, incorporating updates to `code_processor.py` for advanced expression parsing. Examples are provided in `test_1_expression.txt` and `test_200_expression.txt`. Additionally, a script, `build_and_run.sh`, has been added for compiling and executing LLVM IR code.
 
 ---
 
-### Detailed Steps for Manual Compilation and Execution
-**Prerequisites:**
+### Steps for Compilation and Execution
+This chapter uses the same workflow introduced in Part I. Below are the steps, with updates specific to the new functionality in this part:
+
+**Step 1: Check the Prerequisites:**
 
 Ensure the required tools (`opt`, `llc`, `clang`) are installed before proceeding.
 
-**Step 1: Generate LLVM IR Code**
+**Step 2: Generate LLVM IR and Assembly Code**
 ```bash
 python cradle.py test_1_expression.txt --M68k test_1_expression.m68k.asm --LLVM test_1_expression.ll
 ```
-**Step 2: Compile LLVM IR to Bitcode**
-
-Use `opt` to compile with the desired optimization level (`-O0` to `-O3`):
+**Step 3: Compile and Execute LLVM IR Code**
+Refer to the script `build_and_run.sh` for automation:
 ```bash
-opt --O0 test_1_expression.ll -o test_1_expression.bc
+./build_and_run.sh test_1_expression
+./build_and_run.sh test_200_expression
 ```
-**Step 3: Compile Bitcode to Assembly Code**
+**Step 4: Verify the Output**
 
-Use `llc` with optimization and relocation settings:
-```bash
-llc -filetype=asm -O0 -relocation-model=pic test_1_expression.bc -o test_1_expression.asm
+Test cases in `test_1_expression.txt` and `test_200_expression.txt` demonstrate the extended functionality.
+
+**Example Input:**
+```csv
+3+5*7
 ```
-**Step 4: Compile Bitcode to Mainframe Assembly Code (optional)**
-
-For `systemz` architecture:
-```bash
-llc -filetype=asm -O0 -march=systemz -relocation-model=pic test_1_expression.bc -o test_1_expression.systemz.asm
-```
-**Step 5: Compile Assembly Code to Executable**
-
-Use `clang`:
-```bash
-clang test_1_expression.asm -o test_1_expression
-```
-**Step 6: Run the Executable**
-```bash
-./test_1_expression
-```
-**Step 7: Check the Output**
-
-The following output will be generated from the input file, which is a CSV file. The columns represent:
-1. **Counter:** Test case number.
-2. **Expected:** Result computed by Python.
-3. **Current:** Result from LLVM IR-generated code.
-
 **Example Output:**
 ```csv
 counter;expected;current
 1;38;38
 ```
+1. **Counter:** Test case number.
+2. **Expected:** Result computed by Python.
+3. **Current:** Result from LLVM IR-generated code.
+
+
 
 ---
 
